@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+body {
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: skyblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: black;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
