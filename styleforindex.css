@@ -1,27 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 body {
-    font-family: 'ZCOOL KuaiLe', sans-serif;
+    margin: 0;
+    background: darkgray;
+    font-family: 'Nunito', sans-serif;
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: skyblue;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
 
-.navbar a {
+.navbar h1 {
+    float: left;
+    font-size: 20px;
+    /*text-transform: uppercase;*/
+    padding: 5px;
+}
+
+header {
+    background: rgb(92, 128, 139);
+    border: 2px solid black;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
     float: right;
-    display: block;
-    color: black;
-    padding: 15px 18px;
-    text-decoration: none;
-    font-size: 18px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: width 500ms;
+
+    
+}
+
+nav a:hover::before {
+    width: 100%;
+    
+}
+
+.videobg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #333;
+    color: white;
+    margin-bottom: 100px;
+    padding: 200px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+
 }
