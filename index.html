@@ -46,7 +46,7 @@
     </div>
 
 <div id="overview">
-    <div class="card rounded-end" style="width:90%; margin-right: 0%; margin:10%; padding:5%; background: rgba(202, 202, 202, 0.45);">
+    <div class="card rounded-end slide-in from-right" style="width:90%; margin-right: 0%; margin:10%; padding:5%; background: rgba(202, 202, 202, 0.45);">
         <div class="container text-center justify-content-center">
 
             <div class="row">
@@ -61,21 +61,21 @@
 
                 <div class="col-md-8 mt-2">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title</h5>
-                        <p class="card-text">Everything Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam placeat officiis velit deserunt earum! Voluptas, porro facere. Error fuga totam rerum eveniet, unde iste dolores beatae repellat quae voluptates, aspernatur incidunt obcaecati nobis praesentium et quidem alias amet recusandae neque quo repudiandae sed? Similique, maiores tenetur ratione est, amet possimus beatae, adipisci dignissimos debitis officiis incidunt tempora. A quam, ex fuga expedita blanditiis cupiditate corporis voluptatum est praesentium commodi suscipit libero consequuntur perferendis? Repellendus, animi minima, omnis pariatur, exercitationem totam nam cum facilis vero perferendis magni laudantium expedita.</p>
+                        <h5 class="card-title fs-1 fw-bold">Card Title</h5>
+                        <p class="card-text lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit a nisi obcaecati atque non architecto aperiam provident ipsam voluptatum beatae. Reprehenderit quibusdam cupiditate nostrum! Necessitatibus vel dicta inventore est minima.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card rounded-start" style="width:90%; padding:5%; margin-top: 10%; margin-right:10%; margin-bottom: 10%; background: rgba(202, 202, 202, 0.45)">
+    <div class="card rounded-start slide-in from-left" style="width:90%; padding: 5%; margin-top: 10%; margin-right:10%; margin-bottom: 10%; background: rgba(202, 202, 202, 0.45)">
         <div class="container text-center justify-content-center">
             <div class="row">
                 <div class="col-md-8 mt-2">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title</h5>
-                        <p class="card-text">Everything Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam placeat officiis velit deserunt earum! Voluptas, porro facere. Error fuga totam rerum eveniet, unde iste dolores beatae repellat quae voluptates, aspernatur incidunt obcaecati nobis praesentium et quidem alias amet recusandae neque quo repudiandae sed? Similique, maiores tenetur ratione est, amet possimus beatae, adipisci dignissimos debitis officiis incidunt tempora. A quam, ex fuga expedita blanditiis cupiditate corporis voluptatum est praesentium commodi suscipit libero consequuntur perferendis? Repellendus, animi minima, omnis pariatur, exercitationem totam nam cum facilis vero perferendis magni laudantium expedita.</p>
+                        <h5 class="card-title fs-1 fw-bold">Card Title</h5>
+                        <p class="card-text lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati id sapiente animi alias inventore? Possimus aut quaerat architecto quos commodi, provident esse quod voluptatibus, expedita mollitia officia atque laudantium sit?</p>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <div class="card rounded-end" style="width:90%; padding:5%; margin-right: 0%; margin:10%; background: rgba(202, 202, 202, 0.45)">
+    <div class="card rounded-end slide-in from-right" style="width:90%; padding:5%; margin-right: 0%; margin:10%; background: rgba(202, 202, 202, 0.45)">
         <div class="container text-center justify-content-center">
 
             <div class="row">
@@ -100,14 +100,51 @@
 
                 <div class="col-md-8 mt-2">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title</h5>
-                        <p class="card-text">Everything Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam placeat officiis velit deserunt earum! Voluptas, porro facere. Error fuga totam rerum eveniet, unde iste dolores beatae repellat quae voluptates, aspernatur incidunt obcaecati nobis praesentium et quidem alias amet recusandae neque quo repudiandae sed? Similique, maiores tenetur ratione est, amet possimus beatae, adipisci dignissimos debitis officiis incidunt tempora. A quam, ex fuga expedita blanditiis cupiditate corporis voluptatum est praesentium commodi suscipit libero consequuntur perferendis? Repellendus, animi minima, omnis pariatur, exercitationem totam nam cum facilis vero perferendis magni laudantium expedita.</p>
+                        <h5 class="card-title fs-1 fw-bold">Card Title</h5>
+                        <p class="card-text lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eligendi est repudiandae laudantium, quas reiciendis dolorem reprehenderit minima molestiae iste necessitatibus consectetur natus nostrum dolor ullam id nisi quos deserunt.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div>
+    
+</div>
+
+
+<script>
+
+const sliders = document.querySelectorAll('.slide-in');
+
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    appearOnScroll
+) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+        }
+
+    })
+}, 
+appearOptions); 
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+});
+
+</script>
+
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 

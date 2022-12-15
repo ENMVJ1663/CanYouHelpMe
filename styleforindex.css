@@ -4,6 +4,7 @@ body {
     margin: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.637)), url('Imagery/marbletextures.jpg');
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -66,4 +67,28 @@ body {
 
 .rounded-start {
     border-radius: 5em;
+}
+
+.card-text {
+    margin-top: 5%;
+    font-size: 1.25em;
+}
+
+.from-left {
+    transform: translateX(-50%);
+}
+
+.from-right {
+    transform: translateX(50%);
+}
+
+.from-left, .from-right {
+    
+    transition: opacity 350ms ease-in, transform 750ms ease-in;
+    opacity:0;
+}
+
+.from-left.appear, .from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
 }
