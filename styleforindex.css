@@ -75,16 +75,16 @@ body {
 }
 
 .from-left {
-    transform: translateX(-25%);
+    transform: translateX(-10%);
 }
 
 .from-right {
-    transform: translateX(25%);
+    transform: translateX(10%);
 }
 
 .from-left, .from-right {
     
-    transition: opacity 250ms ease-in, transform 500ms ease-in;
+    transition: opacity 250ms ease-in, transform 250ms ease-in;
     opacity:0;
 }
 
