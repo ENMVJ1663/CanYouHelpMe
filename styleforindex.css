@@ -2,102 +2,68 @@
 
 body {
     margin: 0;
-    background: darkgray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.637)), url('Imagery/marbletextures.jpg');
     font-family: 'Nunito', sans-serif;
 }
 
-.navbar {
-    width: 80%;
-    margin: 0 auto;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-}
-
-.navbar h1 {
-    float: left;
-    font-size: 20px;
-    /*text-transform: uppercase;*/
-    padding: 5px;
-}
-
-header {
-    background: rgb(92, 128, 139);
-    border: 2px solid black;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-nav {
-    float: right;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 25px;
-    position: relative;
-}
-
-nav a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #000;
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #444;
-
-    position: absolute;
-    top: 0;
-    width: 0%;
-
-    transition: width 500ms;
-
-    
-}
-
-nav a:hover::before {
-    width: 100%;
-    
-}
 
 .videobg {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #333;
+    /*background: #333;*/
+    background:rgba(0,0,0,0.6);
     color: white;
-    margin-bottom: 100px;
-    padding: 200px 0;
+    /*margin-bottom: 100px;*/
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
 .video-bg {
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100%;
-    
+}
 
+.videobg td {
+    padding:20px;
+}
+
+.videobg th {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.videobg a {
+    text-decoration: none;
+    font-size: 18px;
+    color:aliceblue;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    transition: padding 500ms, border-radius 500ms, background 500ms;
+}
+
+.videobg a:hover {
+    padding: 15px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.25)
+}
+
+#overview {
+    text-align: center;
+}
+
+.rounded-end {
+    border-radius: 5em;
+}
+
+.rounded-start {
+    border-radius: 5em;
 }
