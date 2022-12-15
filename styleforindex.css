@@ -61,17 +61,26 @@ body {
     text-align: center;
 }
 
-.rounded-end {
+.rounded-end, .rounded-start {
     border-radius: 5em;
 }
 
-.rounded-start {
-    border-radius: 5em;
+.rounded {
+    border-radius: 5em !important;
 }
 
 .card-text {
     margin-top: 5%;
     font-size: 1.25em;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
 }
 
 .from-left {
@@ -91,4 +100,18 @@ body {
 .from-left.appear, .from-right.appear {
     transform: translateX(0);
     opacity: 1;
+}
+
+.card {
+    background: rgba(202, 202, 202, 0.45);
+    width: 90%;
+}
+
+#About {
+    text-align: center;
+}
+
+
+#About h6 {
+    color: rgb(45, 45, 45);
 }
