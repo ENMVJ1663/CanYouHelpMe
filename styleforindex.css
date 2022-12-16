@@ -14,6 +14,7 @@ body {
     align-items: center;
     text-align: center;
     /*background: #333;*/
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     /*margin-bottom: 100px;*/
     min-height: 100vh;
@@ -31,6 +32,7 @@ body {
 }
 
 .videobg td {
+    padding: 20px;
 }
 
 .videobg th {
@@ -41,6 +43,8 @@ body {
 .videobg a {
     text-decoration: none;
     font-size: 18px;
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.1);
     border: 1px solid aliceblue;
     border-radius: 20px;
     padding: 10px;
@@ -50,12 +54,15 @@ body {
 .videobg a:hover {
     padding: 15px;
     border-radius: 25px;
+    background: rgba(0, 0, 0, 0.25)
 }
 
 #overview {
     text-align: center;
 }
 
+.rounded-end,
+.rounded-start {
     border-radius: 5em;
 }
 
@@ -85,9 +92,16 @@ body {
     transform: translateX(10%);
 }
 
+.from-left,
+.from-right {
+
+    transition: opacity 250ms ease-in, transform 600ms cubic-bezier(.175, .885, .32, 1.275);
+    opacity: 0;
     will-change: transform;
 }
 
+.from-left.appear,
+.from-right.appear {
     transform: translateX(0);
     opacity: 1;
 }
@@ -104,4 +118,92 @@ body {
 
 #About h6 {
     color: rgb(45, 45, 45);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container ul {
+    width: auto;
+}
+
+.causes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 800px;
+}
+
+.container-causes {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container-causes .card-causes {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: white;
+    opacity: 0.3;
+    margin: 30px 10px;
+    padding: 20px 15px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.container-causes .card-causes:hover {
+    height: 320px;
+}
+
+
+.container-causes .card-causes .image-causes {
+    position: relative;
+    width: 260px;
+    height: 260px;
+
+    top: -40%;
+    left: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container-causes .card-causes .image-causes img {
+    max-width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0.3;
+}
+
+.container-causes .card-causes .content-causes {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    color: #111;
+    text-align: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.container-causes .card-causes:hover .content-causes {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+
 }
