@@ -93,8 +93,9 @@ body {
 
 .from-left, .from-right {
     
-    transition: opacity 250ms ease-in, transform 250ms ease-in;
+    transition: opacity 250ms ease-in, transform 600ms cubic-bezier(.175,.885,.32,1.275);
     opacity:0;
+    will-change: transform;
 }
 
 .from-left.appear, .from-right.appear {

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.637)), url('Imagery/marbletextures.jpg');
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+.card {
+    /* background: rgba(228, 228, 228, 0.603); */
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#helplines .container {
+    margin-top:10%;
+    margin-bottom: 10%;
+    padding-left: 5%;
+    padding-bottom:5%;
+    padding-right: 5%;
+    background:rgba(255, 255, 255, 0.5);
+}
+
+#helplines img {
+    width:10rem;
+
+}
+
+.Absolute-Center {
+
+    display: flex; /* make us of Flexbox*/
+  
+    align-items: center; /* does vertically center the desired content*/
+  
+    justify-content: center; /* horizontally centers single line items*/
+  
+    text-align: center; /*optional, but helps horizontally center text that breaks into multiple lines */
+  
+  } 
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
