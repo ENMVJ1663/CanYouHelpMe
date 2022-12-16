@@ -120,10 +120,6 @@ body {
     color: rgb(45, 45, 45);
 }
 
-mark {
-    background:rgba(220, 224, 185, 0.37);
-}
-
 .card-container {
     display: flex;
     flex-direction: column;
@@ -132,4 +128,93 @@ mark {
 
 .card-container ul {
     width: auto;
+}
+
+.causes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(248, 249, 250, 0.3);
+    flex-direction: row;
+    padding-top: 5%;
+    min-height: 900px;
+}
+
+.container-causes {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container-causes .card-causes {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: white;
+    margin: 30px 10px;
+    padding: 20px 15px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.container-causes .card-causes li {
+    text-align: left !important;
+}
+
+.container-causes .card-causes .card-text {
+    margin-top: auto;
+}
+
+.container-causes .card-causes:hover {
+    /* height: 320px; */
+    height: 22em;
+}
+
+.container-causes .card-causes:hover .image-causes {
+    top: -40%;
+}
+
+.container-causes .card-causes .image-causes {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -48%;
+    left: 2px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container-causes .card-causes .image-causes img {
+    max-width: 100%;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.container-causes .card-causes .content-causes {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    color: #111;
+    text-align: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.container-causes .card-causes:hover .content-causes {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+
 }
