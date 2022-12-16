@@ -116,3 +116,7 @@ body {
 #About h6 {
     color: rgb(45, 45, 45);
 }
+
+mark {
+    background:rgba(220, 224, 185, 0.37);
+}
