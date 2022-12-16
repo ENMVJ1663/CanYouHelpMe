@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.637)), url('Imagery/marbletextures.jpg');
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+.card {
+    /* background: rgba(228, 228, 228, 0.603); */
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#helplines .container {
+    margin-top:10%;
+    margin-bottom: 10%;
+    padding:5%;
+    background:rgba(255, 255, 255, 0.5);
+}
