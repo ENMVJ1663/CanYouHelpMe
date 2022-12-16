@@ -130,12 +130,17 @@ body {
     width: auto;
 }
 
+.bg {
+    background-color: rgba(248, 249, 250, 0.3);
+}
+
 .causes {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgba(248, 249, 250, 0.3);
+    width: 85%;
+    margin: 0 auto;
     flex-direction: row;
     padding-top: 5%;
     min-height: 900px;
