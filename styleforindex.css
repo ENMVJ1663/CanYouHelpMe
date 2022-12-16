@@ -120,6 +120,10 @@ body {
     color: rgb(45, 45, 45);
 }
 
+mark {
+    background:rgba(220, 224, 185, 0.37);
+}
+
 .card-container {
     display: flex;
     flex-direction: column;
