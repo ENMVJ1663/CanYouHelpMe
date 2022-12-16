@@ -35,17 +35,54 @@
         </div>
     </header>
 
+    <div id="myths">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active Absolute-Center" data-bs-interval="3000">
+                <h1>Hi</h1>
+              </div>
+              <div class="carousel-item Absolute-Center" data-bs-interval="3000">
+                
+              </div>
+              <div class="carousel-item Absolute-Center" data-bs-interval="3000">
+                
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+
     <div id="helplines">
-        <div class="container text-center rounded-5">
+        <div class="container text-center rounded-5 fade-in">
             <div class="row">
-                <div class="col">
-                    <h1 class="fw-bold"> Helplines </h1>
+
+                <div class="col-md-6">
+                    <div class="container text-center" style=" margin-top:7rem; margin-left:3rem; background:rgba(197, 195, 195, 0.068);">
+                        <div class="row">
+                            <h1 class="fw-bold" style="padding-right:3%;"> Helplines</h1>
+                        </div>
+                        <div class="row">
+                            <p>You can seek help here, with professional sources to reach out.</p>
+                        </div>
+                    </div>           
                     
-                </div>
+                    </div>
+                <div class="col-md-6 Absolute-Center p-2">
+                    <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_of3skn6w.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                </div>   
+                
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card" style="width: auto;">
+                    <div class="card Absolute-Center" style="width: auto;">
                         <img src="https://www.healthcare.com.sg/wp-content/uploads/cache/images/2020/04/sgh2/sgh2-72654619.jpg"
                             class="card-img-top"
                             alt="Singapore General Hospital, Sleep Disorder Clinic">
@@ -60,7 +97,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card" style="width: auto;">
+                    <div class="card Absolute-Center" style="width: auto;">
                         <img src="https://media.glassdoor.com/sqll/347765/changi-general-hospital-squarelogo-1536799538921.png"
                             class="card-img-top" alt="Changi General Hospital">
                         <div class="card-body">
@@ -73,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card" style="width: auto;">
+                    <div class="card Absolute-Center" style="width: auto;">
                         <img src="Imagery/sleep-centre-banner.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Sleep Centre</h5>
@@ -89,6 +126,43 @@
 
 
 
+    <script>
+
+        const sliders = document.querySelectorAll('.slide-in');
+
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -250px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (
+            entries,
+            appearOnScroll
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add("appear");
+                    appearOnScroll.unobserve(entry.target);
+                }
+
+            })
+        },
+            appearOptions);
+
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        })
+
+        sliders.forEach(slider => {
+            appearOnScroll.observe(slider);
+        });
+
+    </script>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
