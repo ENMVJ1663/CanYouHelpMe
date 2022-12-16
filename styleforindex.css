@@ -14,7 +14,6 @@ body {
     align-items: center;
     text-align: center;
     /*background: #333;*/
-    background:rgba(0,0,0,0.6);
     color: white;
     /*margin-bottom: 100px;*/
     min-height: 100vh;
@@ -32,7 +31,6 @@ body {
 }
 
 .videobg td {
-    padding:20px;
 }
 
 .videobg th {
@@ -43,8 +41,6 @@ body {
 .videobg a {
     text-decoration: none;
     font-size: 18px;
-    color:aliceblue;
-    background: rgba(0,0,0,0.1);
     border: 1px solid aliceblue;
     border-radius: 20px;
     padding: 10px;
@@ -54,14 +50,12 @@ body {
 .videobg a:hover {
     padding: 15px;
     border-radius: 25px;
-    background: rgba(0,0,0,0.25)
 }
 
 #overview {
     text-align: center;
 }
 
-.rounded-end, .rounded-start {
     border-radius: 5em;
 }
 
@@ -91,14 +85,9 @@ body {
     transform: translateX(10%);
 }
 
-.from-left, .from-right {
-    
-    transition: opacity 250ms ease-in, transform 600ms cubic-bezier(.175,.885,.32,1.275);
-    opacity:0;
     will-change: transform;
 }
 
-.from-left.appear, .from-right.appear {
     transform: translateX(0);
     opacity: 1;
 }
